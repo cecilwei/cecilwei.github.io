@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow</title>
+  <style>
+    body {
+      padding-top: 50px; /* Add padding to the top of the body */
+    }
+    #slideshow {
+      position: fixed;
+      top: calc(50% + 50px); /* Position the slideshow below the title */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0; /* Ensure slideshow is behind the title */
+    }
+    h1 {
+      position: fixed;
+      top: 0; /* Position the title at the top of the page */
+      width: 100%;
+      text-align: center;
+      color: red;
+      font-weight: bold;
+      padding-top: 10px; /* Add some padding above the title */
+      margin: 0; /* Remove default margin */
+      z-index: 1; /* Ensure title is above the slideshow */
+    }
+  </style>
+</head>
+<body>
+  <h1>Ruckathon 2024 Logo Competetion entries</h1> <!-- Title -->
+  <div id="slideshow">
+    <img src="" id="img" style="max-width: 100%; max-height: 100%;">
+  </div>
+
+  <script>
+    var images = [
+            "test.jpg",		      
+"Capture1.JPG",
+"anindya.jpg",
+"Capture2.JPG",
+"Capture3.JPG",
+"Capture5.JPG",
+"image2.png",
+"IMG_2667.jpg",
+"JustLogo1.png",
+"JustLogo2.png",
+"JustLogo3.png",
+"Logo1.png",
+"logo1_banner.png",
+"Logo2.png",
+"Logo3.png",
+"logo6788.jpg",
+"logoruckathon24.png",
+"Logo_2.png",
+"pro-WvB1om8C.jpeg",
+"pro-YazR8iJ8.jpeg",
+"processed-A6CE74BD-5D28-45BC-9E6C-565215EC5005.jpeg",
+"processed-CD9CF949-A023-4F91-91B4-F6D086CED7A7.jpeg",
+"r1.png",
+"r2.png",
+"r3.png",
+"r4.png",
+"r5.png",
+"r6.jpeg",
+"Ruckathon-2024-logo-Anubhav.png",
+"Ruckathon-2024-Submission-Rajiv.png",
+"RUCKATHON.PNG",
+"ruckathon.R.wu.jpg",
+"ruckathon.rwu.v2.jpg",
+"RUCKATHON10202024-LED.png",
+"RuckathonLogo-2024.png",
+"RuckathonLogo0.png",
+"RuckathonLogo1.png",
+"RUCKATHON_2024-01.jpg",
+"RUCKATHON_2024-01.png",
+"Ruckathon_logo.png",
+"RUCKATHON_LOGO1_274152.jpg",
+"Ruckathon_logo2024.png",
+"RUCKATHON_LOGO2_274152.JPG",
+"RUCKATHON_LOGO3_274152.jpg",
+"Ruckathon_Logo_2024.JPG",
+"ruckhaton-2024-logo--desc-lovuikeng.jpg",
+"Slide1.JPG",
+"Slide2.JPG",
+"Slide3.JPG",
+"Slide4.JPG",
+"submittion_1.png",
+"submittion_2.png",
+"submittion_3.png",
+"submittion_4.png",
+"viren_logo.jpg",
+"eight.jpeg",
+"four.png",
+"give.jpeg",
+"ONe.jpeg",
+"RUCK.png",
+"six.jpeg",
+"Three.png",
+"Two.png",
+"nine.jpeg",
+      // Add more image filenames here
+    ];
+    var index = 0;
+    var imgElement = document.getElementById("img");
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      imgElement.src = images[index];
+    }
+
+    function startSlideshow() {
+      nextImage(); // Display the first image
+      setInterval(nextImage, 5000); // Change image every 5 seconds
+    }
+
+    startSlideshow(); // Start the slideshow when the page loads
+  </script>
+</body>
+</html>
